@@ -12,10 +12,10 @@ parsed = JSON.parse(json)
 
 parsed["data"].each do |busi|
 # remember to escape commas camelback inn
+# open true/false to 1/0 done with find/replace after (todo fix if annoying)
 	outfile.write("#{busi['business_id']},#{busi['name'].gsub(',', '\,')},#{busi['city'].gsub(',', '\,')},#{busi['state'].gsub(',', '\,')},#{busi['stars']},#{busi['longitude']},#{busi['latitude']},#{busi['open']},#{busi['review_count']}")
-
-  #outfile.write(busi["business_id"] + "," + busi["name"].gsub(',', '\,') + "," + busi["city"] + "," + busi["state"] + "," + busi["stars"])
-  outfile.write("\n")
+	outfile.write("\n")
 end
 
 outfile.close
+file.close
