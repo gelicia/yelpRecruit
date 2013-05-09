@@ -1,4 +1,3 @@
-# JSON Parsing example
 require "rubygems"
 require "json"
 
@@ -14,8 +13,6 @@ catArr = Array.new()
 parsed["data"].each do |busi|
 	busi['categories'].each do |category|
 		catArr.push(category)
-		#outfile.write(category)
-		#outfile.write("\n")
 	end
 end
 
